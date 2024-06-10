@@ -1,0 +1,91 @@
+
+<script>
+    const counters = document.querySelectorAll('.count')
+    const speed = 100;
+
+    counters.forEach((counter) => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            
+            const inc = target / speed;
+
+            if(count < target){
+                counter.innerText = count + inc;
+                setTimeout(updateCount,1);
+            }else{
+                count.innerText = target;
+            }
+           
+
+        }
+
+        updateCount();
+    })
+    
+
+    
+    
+</script>
+
+
+<section >
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="container" data-aos='fade-right'>
+                    <img src="/src/images/counts-img.svg" class="img-fluid" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row mt-5 p-3" data-aos="fade-left">
+                   <div class="col-md-6 mt-3">
+                       <div class="count-box fw-bold ">
+                           <i class="fa-regular fa-face-smile fa-3x"></i>
+                           <span class='count' data-target=12000>0</span>
+                               
+                                <p><strong>Organic Reach (Global)</strong></p>
+                       </div>
+                    </div>
+                    <div class="col-md-6 mt-3">
+                        <div class="count-box fw-bold">
+                            <i class="fa-solid fa-book fa-3x"></i>
+                            <span class='count' data-target=14000>0</span>
+                                 <p><strong>Campains</strong></p>
+                        </div>
+                     </div>
+                     <div class="col-md-6 mt-5">
+                        <div class="count-box fw-bold">
+                            <i class="fa-regular fa-clock fa-3x"></i>
+                            <span class='count' data-target=16000>0</span>
+                                 <p><strong>Campains</strong></p>
+                        </div>
+                     </div>
+                     <div class="col-md-6 mt-5">
+                        <div class="count-box fw-bold">
+                            <i class="fa-solid fa-globe fa-3x"></i>
+                            <span class='count' data-target=18000>0</span>
+                                 <p><strong>Excellent CTR % (Asia)</strong></p>
+                        </div>
+                     </div>
+                </div>
+            </div>
+
+           
+        </div>
+    </div>
+
+</section>
+
+
+
+<style>
+    i{
+        color: #14279b;
+    }
+
+</style>
+
+
+
+   

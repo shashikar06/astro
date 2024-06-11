@@ -1,3 +1,17 @@
+---
+
+import hero from '../assets/hero-img.png'
+interface ImageMetadata {
+  src: string;
+  width: number;
+  height: number;
+  format: string;
+}
+---
+
+
+
+
 <section class="mt-5 pt-5">
     <div class="container">
         <div class="row">
@@ -10,7 +24,7 @@
             </div>
             
             <div class="col-lg-6 justifi-conetnt-center image " data-aos='fade-left'>
-              <img src="src/assets/hero-img.png" class="img-fluid" />
+              <img src={hero.src} class="img-fluid" />
             </div>
         </div>
     </div>

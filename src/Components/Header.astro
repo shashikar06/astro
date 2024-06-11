@@ -1,4 +1,14 @@
 ---
+import { Image } from 'astro:assets'
+import logo from '../assets/logo.png'
+
+interface ImageMetadata {
+  src: string;
+  width: number;
+  height: number;
+  format: string;
+}
+
 
 ---
 
@@ -7,8 +17,8 @@
     <div class="container ">
       <h1 class="ml-5 ">
         <a class="navbar-brand" href="#">
-            
-            <img src="src/assets/logo.png"  height="60"/>
+            <img src={logo.src} alt="" height="60"/>
+           
             <span class="headingText">AKESHYA  </span>
           </a>
       </h1>
@@ -36,6 +46,7 @@
       </div>
     </div>
   </nav>
+ 
 
   <style>
     

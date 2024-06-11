@@ -1,4 +1,15 @@
+---
+import count from '../assets/counts-img.svg'
 
+
+
+interface ImageMetadata {
+  src: string;
+  width: number;
+  height: number;
+  format: string;
+}
+---
 <script>
     const counters = document.querySelectorAll('.count')
     const speed = 100;
@@ -34,7 +45,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="container" data-aos='fade-right'>
-                    <img src="src/assets/counts-img.svg" class="img-fluid" />
+                    <img src={count.src} class="img-fluid" />
                 </div>
             </div>
             <div class="col-md-6">
